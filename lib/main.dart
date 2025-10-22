@@ -4,9 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'view/home_screen.dart';
 
 final colorScheme = ColorScheme.fromSeed(
+  brightness: Brightness.dark,
   seedColor: Color.fromARGB(255, 102, 6, 247),
   surface: Color.fromARGB(255, 56, 49, 66),
-  brightness: Brightness.dark,
 );
 
 final theme = ThemeData().copyWith(
@@ -28,12 +28,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: HomeScreen(),
-    );
+    return MaterialApp(title: 'Great Places', theme: theme, home: HomeScreen());
   }
 }
