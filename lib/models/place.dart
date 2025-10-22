@@ -1,6 +1,10 @@
-class Place {
-  final String? id;
-  final String? title;
+import 'package:uuid/uuid.dart';
 
-  const Place({this.id, this.title});
+const uuid = Uuid();
+
+class Place {
+  final String id;
+  final String title;
+
+  Place({required this.title}) : id = uuid.v4();
 }
