@@ -1,12 +1,17 @@
-import 'package:favorite_place_app/view/add_place_screen.dart';
-import 'package:favorite_place_app/view/widgets/place_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class HomeScreen extends StatelessWidget {
+import '../providers/user_place.dart';
+import 'add_place_screen.dart';
+import 'widgets/place_list.dart';
+
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final userPlaces = ref.watch(userPlaceProvider);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Your Place'),
@@ -21,7 +26,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: PlaceList(places: []),
+      body: PlaceList(places: userPlaces),
     );
   }
 }
