@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../providers/user_place.dart';
 import 'add_place_screen.dart';
-import 'widgets/place_list.dart';
+import '../widgets/place_list.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
