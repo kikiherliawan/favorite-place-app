@@ -1,5 +1,6 @@
-import 'package:favorite_place_app/view/widgets/input_camera.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/input_camera.dart';
 
 class AddPlaceScreen extends StatefulWidget {
   const AddPlaceScreen({super.key});
