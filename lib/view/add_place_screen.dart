@@ -1,3 +1,4 @@
+import 'package:favorite_place_app/view/widgets/input_camera.dart';
 import 'package:flutter/material.dart';
 
 class AddPlaceScreen extends StatefulWidget {
@@ -21,18 +22,16 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
     return Scaffold(
       appBar: AppBar(title: Text('Add New Place')),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(16),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: TextField(
-                decoration: InputDecoration(labelText: 'Title'),
-                controller: _titleController,
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.onSurface,
-                ),
-              ),
+            TextField(
+              decoration: InputDecoration(labelText: 'Title'),
+              controller: _titleController,
+              style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
             ),
+            SizedBox(height: 16),
+            InputCamera(),
             SizedBox(height: 16),
             ElevatedButton.icon(
               onPressed: () {},
