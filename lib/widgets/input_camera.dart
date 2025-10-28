@@ -37,7 +37,12 @@ class _InputCameraState extends State<InputCamera> {
     );
 
     if (_selectedImage != null) {
-      content = Image.file(_selectedImage!, fit: BoxFit.cover);
+      content = Image.file(
+        _selectedImage!,
+        fit: BoxFit.cover,
+        height: double.infinity,
+        width: double.infinity,
+      );
     }
 
     return Container(
