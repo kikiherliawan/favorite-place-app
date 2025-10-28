@@ -38,7 +38,7 @@ class _InputCameraState extends State<InputCamera> {
 
     if (_selectedImage != null) {
       content = GestureDetector(
-        onTap: () => _takePicture,
+        onTap: _takePicture,
         child: Image.file(
           _selectedImage!,
           fit: BoxFit.cover,
