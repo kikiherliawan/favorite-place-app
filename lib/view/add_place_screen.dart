@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../providers/user_place.dart';
 import '../widgets/input_camera.dart';
+import '../widgets/input_location.dart';
 
 class AddPlaceScreen extends ConsumerStatefulWidget {
   const AddPlaceScreen({super.key});
@@ -56,6 +57,8 @@ class _AddPlaceScreenState extends ConsumerState<AddPlaceScreen> {
                 _selectedImage = image;
               },
             ),
+            SizedBox(height: 16),
+            InputLocation(),
             SizedBox(height: 16),
             ElevatedButton.icon(
               onPressed: _savePlace,
